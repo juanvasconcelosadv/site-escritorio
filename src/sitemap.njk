@@ -4,7 +4,10 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{%- for p in collections.all %}{% if p.url and not p.url.endsWith(".xml") and p.url != "/404.html" and not p.url.startsWith("/admin") %}
-  <url><loc>{{ p.url | absUrl }}</loc><lastmod>{{ p.date | isoDay }}</lastmod><priority>{% if p.url == "/" %}1.0{% elif "/areas-de-atuacao/" in p.url %}0.9{% else %}0.7{% endif %}</priority></url>
+{%- for p in collections.all %}{% if p.url and not p.url.endsWith(".xml") and p.url != "/404.html" and not p.url.startsWith("/admin") and not ("/areas-de-atuacao/" in p.url and p.url != "/areas-de-atuacao/") %}
+  <url><loc>{{ p.url | absUrl }}</loc><lastmod>{{ p.date | isoDay }}</lastmod><priority>{% if p.url == "/" %}1.0{% else %}0.7{% endif %}</priority></url>
 {%- endif %}{% endfor %}
+{%- for a in areas %}
+  <url><loc>{{ ("/areas-de-atuacao/" + a.slug + "/") | absUrl }}</loc><priority>0.9</priority></url>
+{%- endfor %}
 </urlset>
