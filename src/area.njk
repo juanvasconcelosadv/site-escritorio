@@ -1,0 +1,54 @@
+---
+layout: base.njk
+pagination:
+  data: areas
+  size: 1
+  alias: area
+permalink: "/areas-de-atuacao/{{ area.slug }}/"
+eleventyComputed:
+  title: "{{ area.titulo }}"
+  seoTitulo: "{{ area.seoTitulo }}"
+  description: "{{ area.seoDescricao }}"
+---
+{%- from "icones.njk" import icone -%}
+{%- set postsArea = collections.posts | daCategoria(area.titulo) -%}
+<section class="pagina-topo"><div class="wrap">
+  <nav class="trilha"><a href="/">Início</a> › <a href="/areas-de-atuacao/">Áreas de Atuação</a> › {{ area.titulo }}</nav>
+  <h1>{{ area.titulo }}</h1>
+  <p>{{ area.resumo }} Atendimento em Serra Talhada, Tabira e em todo o Brasil.</p>
+</div></section>
+<section class="secao"><div class="wrap duas-col">
+  <div>
+    {% for par in area.intro %}<p>{{ par }}</p>{% endfor %}
+    <h2 class="mt">Como podemos ajudar</h2>
+    <ul class="grade-servicos">{% for s in area.servicos %}<li>{{ icone("check") }}<span>{{ s }}</span></li>{% endfor %}</ul>
+    <h2>Quando procurar orientação</h2>
+    <ul class="lista-check">{% for q in area.quando %}<li>{{ icone("check") }}<span>{{ q }}</span></li>{% endfor %}</ul>
+    <h2 class="mt">Perguntas frequentes</h2>
+    <div class="faq">{% for f in area.faq %}<details{% if loop.first %} open{% endif %}><summary>{{ f.p }}</summary><p>{{ f.r }}</p></details>{% endfor %}</div>
+    {% if postsArea.length %}
+    <h2 class="mt">Artigos sobre {{ area.titulo }}</h2>
+    <div class="grade-art" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr))">{% for p in postsArea | limite(4) %}{% include "card-artigo.njk" %}{% endfor %}</div>
+    {% endif %}
+    <p class="aviso mt">As informações desta página têm caráter informativo e não substituem a análise individual do seu caso.</p>
+  </div>
+  <aside class="lateral">
+    <div class="caixa caixa-azul">
+      <h3>Precisa de orientação em {{ area.titulo }}?</h3>
+      <p>Converse com o escritório e explique sua situação.</p>
+      <a class="btn btn-ouro" style="width:100%;justify-content:center" href="https://wa.me/{{ site.whatsappLink }}?text={{ ('Olá! Vim pelo site e tenho uma dúvida sobre ' + area.titulo + '.') | urlencode }}" target="_blank" rel="noopener">{{ icone("whats") }} Falar pelo WhatsApp</a>
+      <p style="margin:14px 0 0;font-size:.9rem">{{ icone("tel") }} {{ site.telefone }}</p>
+    </div>
+    <div class="caixa lista-areas">
+      <h3>Outras áreas</h3>
+      {% for a in areas %}<a href="/areas-de-atuacao/{{ a.slug }}/" {% if a.slug == area.slug %}aria-current="page"{% endif %}>{{ icone(a.icone) }}{{ a.titulo }}</a>{% endfor %}
+    </div>
+  </aside>
+</div></section>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Service","name":{{ area.titulo | json | safe }},"serviceType":{{ area.titulo | json | safe }},"description":{{ area.seoDescricao | json | safe }},"provider":{"@id":"{{ site.url }}/#escritorio"},"areaServed":[{"@type":"City","name":"Serra Talhada"},{"@type":"City","name":"Tabira"},{"@type":"Country","name":"Brasil"}]},
+ {"@type":"FAQPage","mainEntity":[{% for f in area.faq %}{"@type":"Question","name":{{ f.p | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.r | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]},
+ {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"{{ site.url }}/"},{"@type":"ListItem","position":2,"name":"Áreas de Atuação","item":"{{ site.url }}/areas-de-atuacao/"},{"@type":"ListItem","position":3,"name":{{ area.titulo | json | safe }},"item":"{{ page.url | absUrl }}"}]}
+]}
+</script>

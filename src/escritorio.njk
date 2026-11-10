@@ -1,0 +1,37 @@
+---
+layout: base.njk
+title: O Escritório
+permalink: /escritorio/
+description: "Conheça o escritório Els Cordeiro & Juan Vasconcelos Advogados: sede em Serra Talhada/PE, unidade em Tabira/PE e atendimento em todo o Brasil."
+---
+{%- from "icones.njk" import icone -%}
+<section class="pagina-topo"><div class="wrap">
+  <nav class="trilha"><a href="/">Início</a> › O Escritório</nav>
+  <h1>O Escritório</h1>
+  <p>Advocacia feita no Sertão pernambucano, com olhar atento para quem precisa e atuação em todo o país.</p>
+</div></section>
+<section class="secao"><div class="wrap duas-col">
+  <div>
+    <h2>Nossa história</h2>
+    <p>O escritório {{ site.nome }} nasceu em Serra Talhada com um propósito simples: oferecer à população do Sertão do Pajeú uma advocacia técnica, atualizada e próxima, em que o cliente entende cada passo do seu caso.</p>
+    <p>Hoje mantemos sede em Serra Talhada e unidade em Tabira, e atendemos clientes de todo o Brasil por meio de processos eletrônicos e reuniões on-line. Nossa atuação abrange o Direito Previdenciário, Trabalhista, Civil, de Família, do Consumidor, da Saúde, Penal, Administrativo e Constitucional.</p>
+    <h2 class="mt">Nossos valores</h2>
+    <ul class="lista-check">
+      <li>{{ icone("check") }}<span><strong>Ética:</strong> atuação em conformidade com o Estatuto da Advocacia e o Código de Ética da OAB.</span></li>
+      <li>{{ icone("check") }}<span><strong>Transparência:</strong> informação clara sobre riscos, prazos e cada fase do processo.</span></li>
+      <li>{{ icone("check") }}<span><strong>Técnica:</strong> estudo constante da legislação e da jurisprudência atualizada.</span></li>
+      <li>{{ icone("check") }}<span><strong>Proximidade:</strong> respeito à história de cada cliente e à realidade da nossa região.</span></li>
+    </ul>
+    <h2 class="mt">Equipe</h2>
+    <div class="grade-adv" style="grid-template-columns:1fr">
+      {% for adv in site.advogados %}
+      <div class="adv"><div class="foto">{% if adv.foto %}<img src="{{ adv.foto }}" alt="{{ adv.nome }}">{% else %}{{ adv.iniciais }}{% endif %}</div>
+      <div><h3>{{ adv.nome }}</h3><div class="cargo">{{ adv.cargo }}{% if adv.oab %} · {{ adv.oab }}{% endif %}</div><p>{{ adv.bio }}</p><a href="https://www.instagram.com/{{ adv.instagram }}/" target="_blank" rel="noopener">{{ icone("insta") }} @{{ adv.instagram }}</a></div></div>
+      {% endfor %}
+    </div>
+  </div>
+  <aside class="lateral">
+    {% for u in site.unidades %}<div class="caixa"><h3>{{ u.nome }}</h3><p>{{ u.rua }}{% if u.bairro %}, {{ u.bairro }}{% endif %}<br>{{ u.cidade }}/{{ u.uf }} · CEP {{ u.cep }}</p></div>{% endfor %}
+    <div class="caixa caixa-azul"><h3>Fale com o escritório</h3><a class="btn btn-ouro" style="width:100%;justify-content:center" href="https://wa.me/{{ site.whatsappLink }}" target="_blank" rel="noopener">{{ icone("whats") }} WhatsApp</a></div>
+  </aside>
+</div></section>

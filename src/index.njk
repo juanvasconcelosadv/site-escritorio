@@ -1,0 +1,139 @@
+---
+layout: base.njk
+description: "Escritório de advocacia em Serra Talhada/PE, com unidade em Tabira/PE e atendimento em todo o Brasil. Direito Previdenciário (INSS, BPC/LOAS, aposentadoria), Trabalhista, Civil, Família, Consumidor, Saúde, Penal e Administrativo."
+---
+{%- from "icones.njk" import icone -%}
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="selo">{{ icone("pin") }} Serra Talhada · Tabira · Todo o Brasil</span>
+      <h1>Advocacia próxima de você, com <span>técnica e compromisso</span>.</h1>
+      <p class="lead">Somos um escritório do Sertão do Pajeú dedicado a orientar pessoas e famílias em questões previdenciárias, trabalhistas, cíveis, de família, consumo, saúde e criminais. Atendimento presencial e on-line, com linguagem clara do início ao fim.</p>
+      <div class="hero-acoes">
+        <a class="btn btn-ouro" href="https://wa.me/{{ site.whatsappLink }}?text={{ site.whatsappMensagem | urlencode }}" target="_blank" rel="noopener">{{ icone("whats") }} Falar pelo WhatsApp</a>
+        <a class="btn btn-linha" href="/areas-de-atuacao/">Conheça nossas áreas {{ icone("seta") }}</a>
+      </div>
+    </div>
+    <div class="hero-cartao">
+      <h2>Como trabalhamos</h2>
+      <ul>
+        <li>{{ icone("busca") }}<span><strong>Análise individual</strong>Cada caso é estudado com seus documentos e sua história.</span></li>
+        <li>{{ icone("constitucional") }}<span><strong>Estratégia fundamentada</strong>Lei atualizada, jurisprudência recente e provas bem organizadas.</span></li>
+        <li>{{ icone("whats") }}<span><strong>Acompanhamento próximo</strong>Você sabe o que está acontecendo no seu processo.</span></li>
+        <li>{{ icone("brasil") }}<span><strong>Atendimento em todo o Brasil</strong>Processos eletrônicos e reuniões por vídeo.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="numeros">
+  <div class="wrap">
+    <div><strong>9</strong><span>áreas de atuação</span></div>
+    <div><strong>2</strong><span>unidades no Sertão de PE</span></div>
+    <div><strong>100%</strong><span>processos eletrônicos</span></div>
+    <div><strong>Brasil</strong><span>atendimento on-line</span></div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap">
+    <div class="cabeca revelar">
+      <span class="pre">Áreas de Atuação</span>
+      <h2>Atuação completa para as questões que mais importam</h2>
+      <p>Do benefício do INSS à defesa criminal, cuidamos de cada demanda com a mesma seriedade.</p>
+      <div class="filete"></div>
+    </div>
+    <div class="grade-areas">
+      {% for a in areas %}
+      <a class="card-area revelar" href="/areas-de-atuacao/{{ a.slug }}/">
+        <div class="icone-box">{{ icone(a.icone) }}</div>
+        <h3>{{ a.titulo }}</h3>
+        <p>{{ a.resumo }}</p>
+        <span class="mais">Saiba mais {{ icone("seta") }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="secao secao-azul">
+  <div class="wrap">
+    <div class="cabeca revelar">
+      <span class="pre">Por que nos procurar</span>
+      <h2>Compromisso com cada cliente</h2>
+      <div class="filete"></div>
+    </div>
+    <div class="grade-dif">
+      <div class="dif revelar">{{ icone("pin") }}<h3>Raízes no Sertão</h3><p>Conhecemos a realidade do agricultor, do servidor municipal e das famílias da região.</p></div>
+      <div class="dif revelar">{{ icone("previdencia") }}<h3>Foco previdenciário</h3><p>Experiência diária com INSS, perícias, prova rural e Juizado Especial Federal.</p></div>
+      <div class="dif revelar">{{ icone("constitucional") }}<h3>Fundamentação atual</h3><p>Peças construídas com legislação e precedentes atualizados dos tribunais.</p></div>
+      <div class="dif revelar">{{ icone("whats") }}<h3>Comunicação clara</h3><p>Explicamos cada etapa em linguagem simples, sem juridiquês.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao-branca">
+  <div class="wrap">
+    <div class="cabeca revelar">
+      <span class="pre">Nossa equipe</span>
+      <h2>Quem cuida do seu caso</h2>
+      <div class="filete"></div>
+    </div>
+    <div class="grade-adv">
+      {% for adv in site.advogados %}
+      <div class="adv revelar">
+        <div class="foto">{% if adv.foto %}<img src="{{ adv.foto }}" alt="{{ adv.nome }}">{% else %}{{ adv.iniciais }}{% endif %}</div>
+        <div>
+          <h3>{{ adv.nome }}</h3>
+          <div class="cargo">{{ adv.cargo }}</div>
+          <p>{{ adv.bio }}</p>
+          <a href="https://www.instagram.com/{{ adv.instagram }}/" target="_blank" rel="noopener">{{ icone("insta") }} @{{ adv.instagram }}</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap">
+    <div class="cabeca revelar">
+      <span class="pre">Artigos</span>
+      <h2>Informação jurídica para o seu dia a dia</h2>
+      <p>Conteúdos claros sobre seus direitos, atualizados com as novidades da lei e dos tribunais.</p>
+      <div class="filete"></div>
+    </div>
+    <div class="grade-art">
+      {% for p in collections.posts | limite(3) %}{% include "card-artigo.njk" %}{% endfor %}
+    </div>
+    <p class="centro mt"><a class="btn btn-azul" href="/artigos/">Ver todos os artigos {{ icone("seta") }}</a></p>
+  </div>
+</section>
+
+<section class="secao secao-branca">
+  <div class="wrap">
+    <div class="cabeca revelar">
+      <span class="pre">Onde estamos</span>
+      <h2>Serra Talhada e Tabira, com atendimento em todo o Brasil</h2>
+      <p>Atendemos {{ site.regiao | join(", ") }} e qualquer cidade do país por meio de processos eletrônicos e reuniões on-line.</p>
+      <div class="filete"></div>
+    </div>
+    <div class="grade-contato">
+      {% for u in site.unidades %}
+      <div class="revelar">
+        <iframe class="mapa" loading="lazy" title="Mapa da unidade {{ u.cidade }}" src="https://www.google.com/maps?q={{ u.mapa | urlencode }}&output=embed"></iframe>
+        <p class="mt" style="margin-top:14px"><strong>{{ u.nome }}</strong><br>{{ u.rua }}{% if u.bairro %}, {{ u.bairro }}{% endif %} · {{ u.cidade }}/{{ u.uf }} · CEP {{ u.cep }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap">
+    <div class="cta revelar">
+      <div><h2>Tem uma dúvida sobre seus direitos?</h2><p>Converse com o escritório e receba uma orientação inicial sobre o seu caso.</p></div>
+      <a class="btn btn-ouro" href="https://wa.me/{{ site.whatsappLink }}?text={{ site.whatsappMensagem | urlencode }}" target="_blank" rel="noopener">{{ icone("whats") }} Falar agora</a>
+    </div>
+  </div>
+</section>

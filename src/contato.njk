@@ -1,0 +1,34 @@
+---
+layout: base.njk
+title: Contato
+permalink: /contato/
+description: "Fale com o escritório Els Cordeiro & Juan Vasconcelos Advogados: WhatsApp (87) 9 9620-2591, telefone (87) 3831-7625. Unidades em Serra Talhada e Tabira (PE)."
+---
+{%- from "icones.njk" import icone -%}
+<section class="pagina-topo"><div class="wrap">
+  <nav class="trilha"><a href="/">Início</a> › Contato</nav>
+  <h1>Contato</h1>
+  <p>Escolha o canal que preferir. Atendemos presencialmente em Serra Talhada e Tabira, e on-line para todo o Brasil.</p>
+</div></section>
+<section class="secao"><div class="wrap grade-contato">
+  <div>
+    <a class="canal" href="https://wa.me/{{ site.whatsappLink }}?text={{ site.whatsappMensagem | urlencode }}" target="_blank" rel="noopener">{{ icone("whats") }}<span><strong>WhatsApp</strong>{{ site.whatsapp }}</span></a>
+    <a class="canal" href="tel:{{ site.telefoneLink }}">{{ icone("tel") }}<span><strong>Telefone</strong>{{ site.telefone }}</span></a>
+    <a class="canal" href="mailto:{{ site.email }}">{{ icone("mail") }}<span><strong>E-mail</strong>{{ site.email }}</span></a>
+    <div class="canal">{{ icone("relogio") }}<span><strong>Horário</strong>{{ site.horario }}</span></div>
+    {% for u in site.unidades %}<div class="canal">{{ icone("pin") }}<span><strong>{{ u.nome }}</strong>{{ u.rua }}{% if u.bairro %}, {{ u.bairro }}{% endif %} · {{ u.cidade }}/{{ u.uf }} · CEP {{ u.cep }}<br><a href="https://www.google.com/maps/search/?api=1&query={{ u.mapa | urlencode }}" target="_blank" rel="noopener">Como chegar</a></span></div>{% endfor %}
+  </div>
+  <div class="caixa">
+    <h2 style="font-size:1.5rem">Envie sua mensagem</h2>
+    <p style="color:var(--cinza)">Preencha e sua mensagem abrirá no WhatsApp do escritório, pronta para enviar.</p>
+    <form class="form" id="form-contato">
+      <label>Nome<input name="nome" required autocomplete="name"></label>
+      <label>Cidade<input name="cidade" autocomplete="address-level2"></label>
+      <label>Assunto<select name="assunto">{% for a in areas %}<option>{{ a.titulo }}</option>{% endfor %}<option>Outro assunto</option></select></label>
+      <label>Mensagem<textarea name="mensagem" required placeholder="Conte brevemente sua situação"></textarea></label>
+      <small>Não envie documentos ou dados sensíveis neste primeiro contato. Veja nossa <a href="/privacidade/">Política de Privacidade</a>.</small>
+      <button class="btn btn-ouro" type="submit">{{ icone("whats") }} Enviar pelo WhatsApp</button>
+    </form>
+  </div>
+</div></section>
+<script>window.WHATS="{{ site.whatsappLink }}";</script>

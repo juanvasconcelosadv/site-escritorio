@@ -1,0 +1,23 @@
+---
+layout: base.njk
+title: Artigos
+permalink: /artigos/
+description: "Artigos jurídicos informativos sobre INSS, BPC/LOAS, aposentadoria, direitos trabalhistas, família, consumidor, saúde e mais. Conteúdo do escritório Els Cordeiro & Juan Vasconcelos Advogados."
+---
+{%- from "icones.njk" import icone -%}
+<section class="pagina-topo"><div class="wrap">
+  <nav class="trilha"><a href="/">Início</a> › Artigos</nav>
+  <h1>Artigos e informação jurídica</h1>
+  <p>Explicações claras sobre seus direitos, com base na lei e nas decisões mais recentes dos tribunais.</p>
+</div></section>
+<section class="secao"><div class="wrap">
+  <div class="busca">{{ icone("busca") }}<input id="busca-artigos" type="search" placeholder="Buscar artigo (ex.: BPC, rescisão, pensão)" aria-label="Buscar artigos"></div>
+  <div class="filtros" id="filtros">
+    <button class="ativo" data-cat="">Todos</button>
+    {% for a in areas %}{% if (collections.posts | daCategoria(a.titulo)).length %}<button data-cat="{{ a.titulo }}">{{ a.titulo }}</button>{% endif %}{% endfor %}
+  </div>
+  <div class="grade-art" id="lista-artigos">
+    {% for p in collections.posts %}{% include "card-artigo.njk" %}{% endfor %}
+  </div>
+  <p class="vazio" id="vazio">Nenhum artigo encontrado para essa busca.</p>
+</div></section>

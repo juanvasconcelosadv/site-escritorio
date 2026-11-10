@@ -1,0 +1,23 @@
+---
+layout: base.njk
+title: Áreas de Atuação
+permalink: /areas-de-atuacao/
+description: "Conheça as áreas de atuação do escritório Els Cordeiro & Juan Vasconcelos Advogados: Previdenciário, Trabalhista, Civil, Família, Consumidor, Saúde, Penal, Administrativo e Constitucional."
+---
+{%- from "icones.njk" import icone -%}
+<section class="pagina-topo"><div class="wrap">
+  <nav class="trilha"><a href="/">Início</a> › Áreas de Atuação</nav>
+  <h1>Áreas de Atuação</h1>
+  <p>Atuação completa em nove frentes do Direito, com atendimento presencial em Serra Talhada e Tabira e on-line em todo o Brasil.</p>
+</div></section>
+<section class="secao"><div class="wrap">
+  <div class="grade-areas">
+  {% for a in areas %}
+    <a class="card-area revelar" href="/areas-de-atuacao/{{ a.slug }}/">
+      <div class="icone-box">{{ icone(a.icone) }}</div>
+      <h3>{{ a.titulo }}</h3><p>{{ a.resumo }}</p>
+      <span class="mais">Saiba mais {{ icone("seta") }}</span>
+    </a>
+  {% endfor %}
+  </div>
+</div></section>
