@@ -9,8 +9,8 @@ backend:
     update: "Atualiza: {{slug}}"
     delete: "Remove: {{slug}}"
 
-site_url: https://cordeiroevasconcelos.adv.br
-display_url: https://cordeiroevasconcelos.adv.br
+site_url: https://cordeirovasconcelos.adv.br
+display_url: https://cordeirovasconcelos.adv.br
 logo_url: /assets/img/icone-512.png
 media_folder: src/assets/uploads
 public_folder: /assets/uploads
