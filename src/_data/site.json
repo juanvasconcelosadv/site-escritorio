@@ -2,7 +2,7 @@
   "nome": "Els Cordeiro & Juan Vasconcelos Advogados",
   "nomeCurto": "Els Cordeiro & Juan Vasconcelos",
   "url": "https://cordeirovasconcelos.adv.br",
-  "descricao": "Escritório de advocacia em Serra Talhada/PE, com unidade em Tabira/PE e atendimento em todo o Brasil. Direito Previdenciário, Trabalhista, Civil, Família, Consumidor, Saúde, Penal, Administrativo e Constitucional.",
+  "descricao": "Advogados em Serra Talhada e Tabira (PE), com atendimento em todo o Brasil: Previdenciário, Trabalhista, Família, Consumidor, Civil, Saúde e Penal.",
   "cnpj": "56.221.574/0001-44",
   "advogados": [
     {
@@ -76,5 +76,6 @@
     "São José do Belmonte",
     "Mirandiba",
     "Sertão do Pajeú"
-  ]
+  ],
+  "googleVerificacao": ""
 }
