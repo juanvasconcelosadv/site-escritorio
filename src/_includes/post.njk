@@ -1,0 +1,46 @@
+---
+layout: base.njk
+tipoOg: article
+---
+{%- from "icones.njk" import icone -%}
+{%- set areaP = null -%}{%- for a in areas %}{% if a.titulo == categoria %}{% set areaP = a %}{% endif %}{% endfor -%}
+{%- set urlAbs = page.url | absUrl -%}
+<section class="pagina-topo"><div class="wrap">
+  <nav class="trilha"><a href="/">Início</a> › <a href="/artigos/">Artigos</a> › {{ categoria }}</nav>
+  <span class="tag" style="background:rgba(201,162,74,.16);color:var(--ouro-2)">{{ categoria }}</span>
+  <h1 style="margin-top:14px">{{ title }}</h1>
+  <p>{{ description }}</p>
+  <p class="meta" style="color:#aebbd0">Por {{ autor or "Dr. Juan Vasconcelos" }} · {{ page.date | dataBR }} · {{ content | leitura }} min de leitura</p>
+</div></section>
+<section class="secao"><div class="wrap duas-col">
+  <article class="artigo">
+    {% if imagem %}<img class="capa-artigo" src="{{ imagem }}" alt="{{ imagemAlt or title }}">{% endif %}
+    <div class="artigo-corpo">{{ content | safe }}</div>
+    <p class="aviso mt">Este conteúdo tem caráter exclusivamente informativo e não substitui a análise individual do seu caso por um profissional.</p>
+    <div class="compartilhar">
+      <strong style="color:var(--azul);margin-right:6px">Compartilhe:</strong>
+      <a href="https://wa.me/?text={{ (title + ' ' + urlAbs) | urlencode }}" target="_blank" rel="noopener">{{ icone("whats") }} WhatsApp</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlAbs | urlencode }}" target="_blank" rel="noopener">{{ icone("face") }} Facebook</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ urlAbs | urlencode }}" target="_blank" rel="noopener">{{ icone("linkedin") }} LinkedIn</a>
+      <button type="button" data-copiar="{{ urlAbs }}">{{ icone("link") }} Copiar link</button>
+    </div>
+    <div class="autor"><div class="foto">{{ "EC" if autor == "Dra. Els Cordeiro" else "JV" }}</div><div><strong>{{ autor or "Dr. Juan Vasconcelos" }}</strong><br><span class="meta">{{ site.nome }}</span></div></div>
+    {%- set rel = collections.posts | daCategoria(categoria) | semAtual(page.url) | limite(2) -%}
+    {%- if not rel.length %}{% set rel = collections.posts | semAtual(page.url) | limite(2) %}{% endif -%}
+    {% if rel.length %}<h2>Leia também</h2><div class="grade-art" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr))">{% for p in rel %}{% include "card-artigo.njk" %}{% endfor %}</div>{% endif %}
+  </article>
+  <aside class="lateral">
+    <div class="caixa caixa-azul">
+      <h3>Ficou com dúvida?</h3>
+      <p>Converse com o escritório sobre a sua situação.</p>
+      <a class="btn btn-ouro" style="width:100%;justify-content:center" href="https://wa.me/{{ site.whatsappLink }}?text={{ ('Olá! Li o artigo \"' + title + '\" no site e gostaria de orientação.') | urlencode }}" target="_blank" rel="noopener">{{ icone("whats") }} Falar pelo WhatsApp</a>
+    </div>
+    {% if areaP %}<a class="caixa card-area" href="/areas-de-atuacao/{{ areaP.slug }}/"><div class="icone-box">{{ icone(areaP.icone) }}</div><h3>{{ areaP.titulo }}</h3><p>{{ areaP.resumo }}</p><span class="mais">Conheça a área {{ icone("seta") }}</span></a>{% endif %}
+  </aside>
+</div></section>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":{{ title | json | safe }},"description":{{ description | json | safe }},"datePublished":"{{ page.date | isoDate }}","dateModified":"{{ (atualizado or page.date) | isoDate }}","inLanguage":"pt-BR","mainEntityOfPage":"{{ urlAbs }}","image":"{{ (imagem or '/assets/img/og-padrao.png') | absUrl }}","articleSection":{{ categoria | json | safe }},"author":{"@type":"Person","name":{{ (autor or "Dr. Juan Vasconcelos") | json | safe }}},"publisher":{"@id":"{{ site.url }}/#escritorio"}},
+ {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"{{ site.url }}/"},{"@type":"ListItem","position":2,"name":"Artigos","item":"{{ site.url }}/artigos/"},{"@type":"ListItem","position":3,"name":{{ title | json | safe }},"item":"{{ urlAbs }}"}]}
+]}
+</script>

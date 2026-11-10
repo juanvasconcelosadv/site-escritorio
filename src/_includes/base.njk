@@ -1,0 +1,138 @@
+{%- from "icones.njk" import icone -%}
+{%- if seoTitulo -%}{%- set tituloPagina = seoTitulo -%}
+{%- elif title -%}{%- set tituloPagina = title + " | " + site.nomeCurto + " Advogados" -%}
+{%- else -%}{%- set tituloPagina = site.nome + " · Advocacia em Serra Talhada e Tabira (PE)" -%}{%- endif -%}
+{%- set descPagina = description or site.descricao -%}
+{%- set imgPagina = (imagem or "/assets/img/og-padrao.png") | absUrl -%}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ tituloPagina }}</title>
+<meta name="description" content="{{ descPagina }}">
+<link rel="canonical" href="{{ page.url | absUrl }}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b1f3a">
+<meta name="geo.region" content="BR-PE">
+<meta name="geo.placename" content="Serra Talhada">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="{{ 'article' if tipoOg == 'article' else 'website' }}">
+<meta property="og:site_name" content="{{ site.nome }}">
+<meta property="og:title" content="{{ title or site.nome }}">
+<meta property="og:description" content="{{ descPagina }}">
+<meta property="og:url" content="{{ page.url | absUrl }}">
+<meta property="og:image" content="{{ imgPagina }}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/icone-180.png">
+<link rel="alternate" type="application/rss+xml" title="Artigos · {{ site.nomeCurto }}" href="/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LegalService",
+      "@id": "{{ site.url }}/#escritorio",
+      "name": "{{ site.nome }}",
+      "url": "{{ site.url }}/",
+      "logo": "{{ site.url }}/assets/img/icone-512.png",
+      "image": "{{ site.url }}/assets/img/og-padrao.png",
+      "description": "{{ site.descricao }}",
+      "telephone": "{{ site.telefoneLink }}",
+      "email": "{{ site.email }}",
+      "priceRange": "Consulte",
+      "address": { "@type": "PostalAddress", "streetAddress": "{{ site.unidades[0].rua }}", "addressLocality": "{{ site.unidades[0].cidade }}", "addressRegion": "{{ site.unidades[0].uf }}", "postalCode": "{{ site.unidades[0].cep }}", "addressCountry": "BR" },
+      "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" }],
+      "areaServed": [{% for c in site.regiao %}{ "@type": "City", "name": "{{ c }}" },{% endfor %} { "@type": "Country", "name": "Brasil" }],
+      "knowsAbout": [{% for a in areas %}"{{ a.titulo }}"{% if not loop.last %}, {% endif %}{% endfor %}],
+      "sameAs": ["https://www.instagram.com/{{ site.instagram }}/", "https://www.instagram.com/{{ site.instagramEls }}/", "{{ site.facebook }}"],
+      "department": [{ "@type": "LegalService", "name": "{{ site.nome }} · Tabira", "telephone": "{{ site.telefoneLink }}", "address": { "@type": "PostalAddress", "streetAddress": "{{ site.unidades[1].rua }}", "addressLocality": "{{ site.unidades[1].cidade }}", "addressRegion": "PE", "postalCode": "{{ site.unidades[1].cep }}", "addressCountry": "BR" } }],
+      "employee": [{% for adv in site.advogados %}{ "@type": "Attorney", "name": "{{ adv.nomeCompleto }}", "jobTitle": "{{ adv.funcao }}" }{% if not loop.last %},{% endif %}{% endfor %}]
+    },
+    { "@type": "WebSite", "@id": "{{ site.url }}/#site", "url": "{{ site.url }}/", "name": "{{ site.nome }}", "inLanguage": "pt-BR", "publisher": { "@id": "{{ site.url }}/#escritorio" } }
+  ]
+}
+</script>
+</head>
+<body class="{{ classeBody }}">
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header class="topo" id="topo">
+  <div class="barra-info">
+    <div class="wrap">
+      <span>{{ icone("pin") }} Serra Talhada · Tabira · Atendimento em todo o Brasil</span>
+      <span class="so-desk">{{ icone("relogio") }} {{ site.horario }}</span>
+      <a href="tel:{{ site.telefoneLink }}">{{ icone("tel") }} {{ site.telefone }}</a>
+    </div>
+  </div>
+  <div class="wrap nav-linha">
+    <a class="marca" href="/" aria-label="{{ site.nome }}, página inicial">
+      <img src="/assets/img/logo-emblema.svg" alt="" width="46" height="46">
+      <span><strong>Els Cordeiro <em>&amp;</em> Juan Vasconcelos</strong><small>Advogados</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <nav id="menu" class="menu" aria-label="Principal">
+      <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Início</a>
+      <a href="/escritorio/" {% if page.url == "/escritorio/" %}aria-current="page"{% endif %}>O Escritório</a>
+      <div class="sub">
+        <a href="/areas-de-atuacao/" {% if "/areas-de-atuacao/" in page.url %}aria-current="page"{% endif %}>Áreas de Atuação</a>
+        <div class="sub-menu">
+          {% for a in areas %}<a href="/areas-de-atuacao/{{ a.slug }}/">{{ icone(a.icone) }}{{ a.titulo }}</a>{% endfor %}
+        </div>
+      </div>
+      <a href="/artigos/" {% if "/artigos/" in page.url %}aria-current="page"{% endif %}>Artigos</a>
+      <a href="/contato/" {% if page.url == "/contato/" %}aria-current="page"{% endif %}>Contato</a>
+      <a class="btn btn-ouro btn-p" href="https://wa.me/{{ site.whatsappLink }}?text={{ site.whatsappMensagem | urlencode }}" target="_blank" rel="noopener">{{ icone("whats") }} Fale conosco</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+{{ content | safe }}
+</main>
+
+<footer class="rodape">
+  <div class="wrap rodape-grade">
+    <div>
+      <a class="marca marca-clara" href="/"><img src="/assets/img/logo-emblema.svg" alt="" width="46" height="46"><span><strong>Els Cordeiro <em>&amp;</em> Juan Vasconcelos</strong><small>Advogados</small></span></a>
+      <p>Advocacia com atuação no Sertão pernambucano e em todo o Brasil. Atendimento presencial em Serra Talhada e Tabira, e on-line para qualquer cidade.</p>
+      <div class="sociais">
+        <a href="https://www.instagram.com/{{ site.instagram }}/" target="_blank" rel="noopener" aria-label="Instagram do Dr. Juan Vasconcelos">{{ icone("insta") }}</a>
+        <a href="https://www.instagram.com/{{ site.instagramEls }}/" target="_blank" rel="noopener" aria-label="Instagram da Dra. Els Cordeiro">{{ icone("insta") }}</a>
+        <a href="{{ site.facebook }}" target="_blank" rel="noopener" aria-label="Facebook do escritório">{{ icone("face") }}</a>
+      </div>
+    </div>
+    <div>
+      <h3>Áreas de Atuação</h3>
+      <ul>{% for a in areas %}<li><a href="/areas-de-atuacao/{{ a.slug }}/">{{ a.titulo }}</a></li>{% endfor %}</ul>
+    </div>
+    <div>
+      <h3>Unidades</h3>
+      {% for u in site.unidades %}
+      <p class="unid"><strong>{{ u.nome }}</strong><br>{{ u.rua }}{% if u.bairro %}, {{ u.bairro }}{% endif %}<br>{{ u.cidade }}/{{ u.uf }} · CEP {{ u.cep }}</p>
+      {% endfor %}
+    </div>
+    <div>
+      <h3>Contato</h3>
+      <ul class="contatos">
+        <li>{{ icone("whats") }} <a href="https://wa.me/{{ site.whatsappLink }}" target="_blank" rel="noopener">{{ site.whatsapp }}</a></li>
+        <li>{{ icone("tel") }} <a href="tel:{{ site.telefoneLink }}">{{ site.telefone }}</a></li>
+        <li>{{ icone("mail") }} <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li>{{ icone("relogio") }} {{ site.horario }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap rodape-legal">
+    <p>{{ site.nome }} · CNPJ {{ site.cnpj }}{% for adv in site.advogados %}{% if adv.oab %} · {{ adv.nome }}, {{ adv.oab }}{% endif %}{% endfor %}</p>
+    <p>Conteúdo de caráter exclusivamente informativo, em conformidade com o Código de Ética e Disciplina da OAB e o Provimento 205/2021 do CFOAB. As informações deste site não substituem a análise individual de cada caso. · <a href="/privacidade/">Política de Privacidade</a> · <a href="/feed.xml">RSS</a></p>
+  </div>
+</footer>
+
+<a class="whats-flutuante" href="https://wa.me/{{ site.whatsappLink }}?text={{ site.whatsappMensagem | urlencode }}" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp">{{ icone("whats") }}<span>WhatsApp</span></a>
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{%- from "icones.njk" import icone -%}
+{%- set areaP = null -%}{%- for a in areas %}{% if a.titulo == p.data.categoria %}{% set areaP = a %}{% endif %}{% endfor -%}
+<a class="card-art revelar" href="{{ p.url }}" data-cat="{{ p.data.categoria }}" data-txt="{{ (p.data.title + ' ' + p.data.description + ' ' + p.data.categoria) | lower }}">
+  <div class="capa">{% if p.data.imagem %}<img src="{{ p.data.imagem }}" alt="{{ p.data.imagemAlt or p.data.title }}" loading="lazy">{% else %}{{ icone(areaP.icone if areaP else "constitucional") }}{% endif %}</div>
+  <div class="corpo">
+    <span class="tag">{{ p.data.categoria }}</span>
+    <h3>{{ p.data.title }}</h3>
+    <p>{{ p.data.description }}</p>
+    <span class="meta">{{ p.date | dataBR }} · {{ p.content | leitura }} min de leitura</span>
+  </div>
+</a>
