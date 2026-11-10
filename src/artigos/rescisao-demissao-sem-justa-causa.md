@@ -3,7 +3,7 @@ title: "Fui demitido sem justa causa: quais são os meus direitos?"
 description: "Saiba quais verbas rescisórias devem ser pagas na demissão sem justa causa, qual o prazo para pagamento e o que fazer se a empresa atrasar."
 date: 2026-10-27
 categoria: Direito Trabalhista
-autor: Dr. Juan Vasconcelos
+autor: Dra. Els Cordeiro
 imagem: ""
 ---
 Na **demissão sem justa causa**, o empregado tem direito a um conjunto de verbas que precisa ser pago **em até 10 dias** após o término do contrato (CLT, art. 477, §6º). Conferir a rescisão é fundamental, porque erros de cálculo são muito comuns.

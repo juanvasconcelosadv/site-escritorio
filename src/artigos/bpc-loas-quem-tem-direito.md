@@ -3,7 +3,7 @@ title: "BPC/LOAS: quem tem direito ao benefício de um salário mínimo"
 description: "Entenda quem pode receber o Benefício de Prestação Continuada, como a renda da família é analisada e o que fazer se o INSS negar o pedido."
 date: 2026-11-03
 categoria: Direito Previdenciário
-autor: Dr. Juan Vasconcelos
+autor: Dra. Els Cordeiro
 imagem: ""
 ---
 O **Benefício de Prestação Continuada (BPC)**, previsto na Lei Orgânica da Assistência Social (Lei 8.742/1993, art. 20), garante **um salário mínimo por mês** a quem não tem condições de se manter nem de ser mantido pela família. Diferente da aposentadoria, ele **não exige contribuição ao INSS**.
