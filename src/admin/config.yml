@@ -1,0 +1,95 @@
+# Painel de postagem do site (Sveltia CMS, compatível com Decap CMS)
+# Troque SEU-USUARIO pelo seu usuário do GitHub depois de criar o repositório.
+backend:
+  name: github
+  repo: juanvasconcelosadv/site-escritorio
+  branch: main
+  commit_messages:
+    create: "Novo artigo: {{slug}}"
+    update: "Atualiza: {{slug}}"
+    delete: "Remove: {{slug}}"
+
+site_url: https://www.elscordeirovasconcelos.adv.br
+display_url: https://www.elscordeirovasconcelos.adv.br
+logo_url: /assets/img/icone-512.png
+media_folder: src/assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: artigos
+    label: Artigos
+    label_singular: Artigo
+    description: "Escreva, edite e publique os artigos do site. Ao salvar, o site é atualizado em cerca de 1 minuto."
+    folder: src/artigos
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    sortable_fields: [date, title, categoria]
+    summary: "{{title}} · {{categoria}} · {{date | date('DD/MM/YYYY')}}"
+    view_filters:
+      - { label: Rascunhos, field: rascunho, pattern: true }
+    fields:
+      - { label: "Título", name: title, widget: string, hint: "Use a dúvida que as pessoas digitam no Google. Ex.: Quem tem direito ao BPC/LOAS?" }
+      - { label: "Resumo (aparece no Google)", name: description, widget: text, hint: "Entre 120 e 160 caracteres." }
+      - { label: "Data", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - label: "Área (categoria)"
+        name: categoria
+        widget: select
+        options: ["Direito Previdenciário","Direito Trabalhista","Direito Civil","Direito de Família","Direito do Consumidor","Direito da Saúde","Direito Penal","Direito Administrativo","Direito Constitucional"]
+      - { label: "Autor", name: autor, widget: select, options: ["Dr. Juan Vasconcelos","Dra. Els Cordeiro"], default: "Dr. Juan Vasconcelos" }
+      - { label: "Imagem de capa (opcional)", name: imagem, widget: image, required: false }
+      - { label: "Descrição da imagem", name: imagemAlt, widget: string, required: false }
+      - { label: "Texto do artigo", name: body, widget: markdown }
+      - { label: "Salvar como rascunho (não publicar)", name: rascunho, widget: boolean, default: false, required: false }
+
+  - name: configuracoes
+    label: Configurações do site
+    editor: { preview: false }
+    files:
+      - name: dados
+        label: Contatos, endereços e equipe
+        file: src/_data/site.json
+        fields:
+          - { label: "Nome do escritório", name: nome, widget: string }
+          - { label: "Nome curto", name: nomeCurto, widget: string }
+          - { label: "Endereço do site", name: url, widget: string }
+          - { label: "Descrição geral (Google)", name: descricao, widget: text }
+          - { label: "CNPJ", name: cnpj, widget: string }
+          - label: Advogados
+            name: advogados
+            widget: list
+            fields:
+              - { label: Nome, name: nome, widget: string }
+              - { label: Nome completo, name: nomeCompleto, widget: string }
+              - { label: Iniciais, name: iniciais, widget: string }
+              - { label: Cargo, name: cargo, widget: string }
+              - { label: Função, name: funcao, widget: string }
+              - { label: "Inscrição OAB (ex.: OAB/PE 00.000)", name: oab, widget: string, required: false }
+              - { label: "Foto (quadrada)", name: foto, widget: image, required: false }
+              - { label: "Instagram (sem @)", name: instagram, widget: string }
+              - { label: Apresentação, name: bio, widget: text }
+          - { label: "Telefone", name: telefone, widget: string }
+          - { label: "Telefone (formato link, ex.: +558738317625)", name: telefoneLink, widget: string }
+          - { label: "WhatsApp", name: whatsapp, widget: string }
+          - { label: "WhatsApp (só números com 55)", name: whatsappLink, widget: string }
+          - { label: "Mensagem padrão do WhatsApp", name: whatsappMensagem, widget: string }
+          - { label: "E-mail", name: email, widget: string }
+          - { label: "Instagram do escritório", name: instagram, widget: string }
+          - { label: "Instagram da Dra. Els", name: instagramEls, widget: string }
+          - { label: "Facebook (link)", name: facebook, widget: string }
+          - { label: "Horário", name: horario, widget: string }
+          - label: Unidades
+            name: unidades
+            widget: list
+            fields:
+              - { label: Nome, name: nome, widget: string }
+              - { label: Rua e número, name: rua, widget: string }
+              - { label: Bairro, name: bairro, widget: string, required: false }
+              - { label: Cidade, name: cidade, widget: string }
+              - { label: UF, name: uf, widget: string }
+              - { label: CEP, name: cep, widget: string }
+              - { label: Latitude, name: lat, widget: number, value_type: float, required: false }
+              - { label: Longitude, name: lng, widget: number, value_type: float, required: false }
+              - { label: "Endereço para o mapa", name: mapa, widget: string }
+          - { label: "Cidades atendidas", name: regiao, widget: list }
