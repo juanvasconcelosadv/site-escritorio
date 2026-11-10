@@ -19,10 +19,12 @@ description: "Conheça o escritório Els Cordeiro & Juan Vasconcelos Advogados: 
     <ul class="lista-check">
       <li>{{ icone("check") }}<span><strong>Ética:</strong> atuação em conformidade com o Estatuto da Advocacia e o Código de Ética da OAB.</span></li>
       <li>{{ icone("check") }}<span><strong>Transparência:</strong> informação clara sobre riscos, prazos e cada fase do processo.</span></li>
+      <li>{{ icone("check") }}<span><strong>Equipe especializada:</strong> profissionais dedicados a cada área do Direito em que atuamos.</span></li>
       <li>{{ icone("check") }}<span><strong>Técnica:</strong> estudo constante da legislação e da jurisprudência atualizada.</span></li>
       <li>{{ icone("check") }}<span><strong>Proximidade:</strong> respeito à história de cada cliente e à realidade da nossa região.</span></li>
     </ul>
-    <h2 class="mt">Equipe</h2>
+    <h2 class="mt">Equipe especializada</h2>
+    <p>O escritório conta com uma equipe especializada, organizada por área de atuação, que garante atenção técnica a cada demanda e acompanhamento próximo de cada cliente.</p>
     <div class="grade-adv" style="grid-template-columns:1fr">
       {% for adv in site.advogados %}
       <div class="adv"><div class="foto">{% if adv.foto %}<img src="{{ adv.foto }}" alt="{{ adv.nome }}">{% else %}{{ adv.iniciais }}{% endif %}</div>

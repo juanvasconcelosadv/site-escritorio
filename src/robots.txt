@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://cordeiroevasconcelos.adv.br/sitemap.xml
+Sitemap: https://cordeirovasconcelos.adv.br/sitemap.xml
