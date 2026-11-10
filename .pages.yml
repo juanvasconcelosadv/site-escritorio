@@ -1,0 +1,33 @@
+# Alternativa de painel: Pages CMS (https://app.pagescms.org), login com a conta do GitHub
+media:
+  input: src/assets/uploads
+  output: /assets/uploads
+content:
+  - name: artigos
+    label: Artigos
+    type: collection
+    path: src/artigos
+    filename: "{fields.title}.md"
+    view: { fields: [title, categoria, date], primary: title, sort: [date] }
+    fields:
+      - { name: title, label: Título, type: string, required: true }
+      - { name: description, label: Resumo (Google), type: text, required: true }
+      - { name: date, label: Data, type: date, required: true }
+      - name: categoria
+        label: Área
+        type: select
+        options: { values: ["Direito Previdenciário","Direito Trabalhista","Direito Civil","Direito de Família","Direito do Consumidor","Direito da Saúde","Direito Penal","Direito Administrativo","Direito Constitucional"] }
+      - name: autor
+        label: Autor
+        type: select
+        default: Dr. Juan Vasconcelos
+        options: { values: ["Dr. Juan Vasconcelos","Dra. Els Cordeiro"] }
+      - { name: imagem, label: Imagem de capa, type: image }
+      - { name: imagemAlt, label: Descrição da imagem, type: string }
+      - { name: rascunho, label: Rascunho (não publicar), type: boolean, default: false }
+      - { name: body, label: Texto, type: rich-text }
+  - name: dados
+    label: Contatos e equipe
+    type: file
+    path: src/_data/site.json
+    format: json
