@@ -1,0 +1,292 @@
+[
+  {
+    "slug": "direito-previdenciario",
+    "titulo": "Direito Previdenciário",
+    "icone": "previdencia",
+    "resumo": "Aposentadorias, BPC/LOAS, auxílio por incapacidade, pensão por morte e revisões junto ao INSS.",
+    "seoTitulo": "Advogado Previdenciário em Serra Talhada e Tabira (PE) · INSS, BPC/LOAS e Aposentadoria",
+    "seoDescricao": "Atuação em Direito Previdenciário no Sertão do Pajeú: aposentadoria, BPC/LOAS, auxílio por incapacidade, pensão por morte, salário-maternidade e revisões no INSS. Atendimento em Serra Talhada, Tabira e todo o Brasil.",
+    "intro": [
+      "O Direito Previdenciário é o centro da nossa atuação. Acompanhamos segurados e famílias do Sertão pernambucano em todas as etapas da relação com o INSS: do planejamento da aposentadoria ao pedido administrativo, do recurso no próprio INSS até a ação judicial no Juizado Especial Federal.",
+      "Muitos benefícios são negados por falta de documento, erro no cadastro (CNIS) ou perícia mal conduzida. Nosso trabalho começa pela análise completa da vida contributiva e da documentação, para que o pedido seja feito do jeito certo e, quando necessário, levado à Justiça com provas sólidas."
+    ],
+    "servicos": [
+      "Aposentadoria por idade, por tempo de contribuição e regras de transição",
+      "Aposentadoria rural e do segurado especial (agricultor familiar)",
+      "Aposentadoria especial e da pessoa com deficiência",
+      "BPC/LOAS para idoso e para pessoa com deficiência",
+      "Auxílio por incapacidade temporária e aposentadoria por incapacidade permanente",
+      "Pensão por morte e auxílio-reclusão",
+      "Salário-maternidade (inclusive rural)",
+      "Revisão de benefícios e correção do CNIS",
+      "Recursos administrativos e ações no Juizado Especial Federal",
+      "Planejamento previdenciário"
+    ],
+    "quando": [
+      "Seu benefício foi negado ou cortado pelo INSS",
+      "A perícia médica não reconheceu sua incapacidade",
+      "Você trabalhou na roça e não sabe como comprovar",
+      "O pedido está parado há meses sem resposta",
+      "Você quer saber quando e como se aposentar com o melhor valor"
+    ],
+    "faq": [
+      { "p": "O INSS negou meu benefício. Ainda posso conseguir?", "r": "Sim. A negativa do INSS não é a palavra final. É possível apresentar recurso administrativo ou ajuizar ação no Juizado Especial Federal, onde haverá nova análise, inclusive com perícia judicial. O importante é reunir os documentos corretos e observar os prazos." },
+      { "p": "Quem tem direito ao BPC/LOAS?", "r": "O BPC (Lei 8.742/1993, art. 20) é devido ao idoso com 65 anos ou mais e à pessoa com deficiência de qualquer idade, desde que a família esteja em situação de vulnerabilidade. Não exige contribuição ao INSS. A análise da renda considera a realidade da família, e não apenas um número fixo." },
+      { "p": "Como o agricultor comprova o tempo rural?", "r": "Com início de prova material (como declarações de sindicato, notas de produtor, documentos de terra, certidões com a profissão de agricultor), complementado por testemunhas. Cada caso exige uma montagem cuidadosa dessa prova." }
+    ]
+  },
+  {
+    "slug": "direito-trabalhista",
+    "titulo": "Direito Trabalhista",
+    "icone": "trabalho",
+    "resumo": "Reclamações trabalhistas, verbas rescisórias, horas extras e vínculo de emprego.",
+    "seoTitulo": "Advogado Trabalhista em Serra Talhada (PE) · Rescisão, Horas Extras e Carteira Assinada",
+    "seoDescricao": "Atuação em Direito do Trabalho: reconhecimento de vínculo, verbas rescisórias, horas extras, FGTS, assédio e acidente de trabalho. Atendimento em Serra Talhada, Tabira e todo o Brasil.",
+    "intro": [
+      "Defendemos o trabalhador que teve direitos desrespeitados durante o contrato ou na hora da demissão. Analisamos a documentação, os contracheques e a rotina de trabalho para identificar o que deixou de ser pago.",
+      "Atuamos perante a Justiça do Trabalho (TRT da 6ª Região e demais regionais), desde a tentativa de acordo até a execução, sempre com informação clara sobre cada etapa do processo."
+    ],
+    "servicos": [
+      "Reconhecimento de vínculo de emprego (trabalho sem carteira assinada)",
+      "Verbas rescisórias, multa do art. 477 e FGTS com 40%",
+      "Horas extras, adicional noturno, insalubridade e periculosidade",
+      "Acidente de trabalho e doença ocupacional",
+      "Assédio moral e dano moral trabalhista",
+      "Rescisão indireta",
+      "Trabalho doméstico",
+      "Cálculos e conferência de rescisão"
+    ],
+    "quando": [
+      "Você foi demitido e não recebeu tudo",
+      "Trabalhou sem carteira assinada",
+      "Fazia horas extras sem receber",
+      "Sofreu acidente ou adoeceu por causa do trabalho",
+      "Passou por humilhação ou perseguição no emprego"
+    ],
+    "faq": [
+      { "p": "Qual o prazo para entrar com ação trabalhista?", "r": "Em regra, até 2 anos após o fim do contrato, podendo cobrar os direitos dos últimos 5 anos (Constituição Federal, art. 7º, XXIX). Passado esse prazo, o direito pode ser perdido." },
+      { "p": "Em quanto tempo a empresa deve pagar a rescisão?", "r": "Em até 10 dias contados do término do contrato (CLT, art. 477, §6º). O atraso gera multa equivalente a um salário do empregado (art. 477, §8º)." },
+      { "p": "Trabalhei sem carteira. Tenho direitos?", "r": "Sim. Comprovado o vínculo, é possível pedir a anotação na carteira e o pagamento de todos os direitos do período, como férias, 13º salário e FGTS, além do reflexo para a aposentadoria." }
+    ]
+  },
+  {
+    "slug": "direito-civil",
+    "titulo": "Direito Civil",
+    "icone": "civil",
+    "resumo": "Indenizações, responsabilidade civil, contratos, usucapião, posse e cobranças.",
+    "seoTitulo": "Advogado Cível em Serra Talhada (PE) · Indenizações, Contratos e Usucapião",
+    "seoDescricao": "Atuação em Direito Civil: ações de indenização por danos morais e materiais, contratos, cobranças, usucapião urbana e rural, posse e regularização de imóveis.",
+    "intro": [
+      "O Direito Civil está presente no dia a dia: na compra de um imóvel, em um contrato que não foi cumprido, no prejuízo causado por terceiros. Atuamos de forma preventiva, revisando e elaborando contratos, e de forma contenciosa, quando é preciso buscar reparação na Justiça.",
+      "Temos experiência com regularização de imóveis rurais e urbanos por usucapião, ações possessórias e indenizações por danos materiais e morais, inclusive contra concessionárias de serviços públicos."
+    ],
+    "servicos": [
+      "Ações de indenização por danos morais, materiais e estéticos",
+      "Responsabilidade civil de empresas e concessionárias",
+      "Elaboração e revisão de contratos",
+      "Usucapião judicial e extrajudicial (urbana e rural)",
+      "Ações possessórias (reintegração e manutenção de posse)",
+      "Cobranças e execuções",
+      "Obrigação de fazer (transferência de veículo, entrega de documentos)"
+    ],
+    "quando": [
+      "Sofreu prejuízo causado por outra pessoa ou empresa",
+      "Tem um imóvel sem escritura ou documentação",
+      "Um contrato não foi cumprido",
+      "Precisa cobrar uma dívida",
+      "Vai assinar um contrato importante e quer segurança"
+    ],
+    "faq": [
+      { "p": "Moro há muitos anos em um imóvel sem escritura. O que fazer?", "r": "A usucapião pode ser o caminho para regularizar. Os requisitos (tempo, tipo de posse e tamanho do imóvel) variam conforme a modalidade prevista no Código Civil e na Constituição. Hoje também é possível fazer a usucapião em cartório, em alguns casos." },
+      { "p": "Quanto tempo tenho para pedir indenização?", "r": "Em regra, a pretensão de reparação civil prescreve em 3 anos (Código Civil, art. 206, §3º, V). Em relações de consumo, o prazo é de 5 anos (CDC, art. 27). Contra o Poder Público, aplica-se em geral o prazo de 5 anos." },
+      { "p": "Vale a pena revisar um contrato antes de assinar?", "r": "Sim. A revisão prévia evita cláusulas abusivas, multas desproporcionais e conflitos futuros, que costumam custar muito mais do que a prevenção." }
+    ]
+  },
+  {
+    "slug": "direito-de-familia",
+    "titulo": "Direito de Família",
+    "icone": "familia",
+    "resumo": "Divórcio, pensão alimentícia, guarda, inventário e partilha.",
+    "seoTitulo": "Advogado de Família em Serra Talhada (PE) · Divórcio, Pensão Alimentícia e Inventário",
+    "seoDescricao": "Atuação em Direito de Família e Sucessões: divórcio consensual e litigioso, pensão alimentícia, revisão e exoneração de alimentos, guarda, convivência, inventário e partilha.",
+    "intro": [
+      "Questões de família envolvem emoções, filhos e patrimônio. Por isso conduzimos cada caso com discrição, escuta atenta e foco em soluções que preservem as relações sempre que possível.",
+      "Priorizamos o acordo e a mediação, inclusive no CEJUSC, mas atuamos com firmeza quando o processo judicial é necessário para proteger seus direitos e os de seus filhos."
+    ],
+    "servicos": [
+      "Divórcio consensual (judicial ou em cartório) e litigioso",
+      "Pensão alimentícia: fixação, revisão, exoneração e execução",
+      "Guarda compartilhada, unilateral e regime de convivência",
+      "Reconhecimento e dissolução de união estável",
+      "Investigação de paternidade",
+      "Inventário judicial e extrajudicial, partilha de bens",
+      "Testamentos e planejamento sucessório"
+    ],
+    "quando": [
+      "Decidiu se separar e quer resolver com segurança",
+      "Precisa fixar, aumentar, reduzir ou encerrar uma pensão",
+      "Há conflito sobre guarda ou visitas dos filhos",
+      "Um familiar faleceu e é preciso fazer o inventário"
+    ],
+    "faq": [
+      { "p": "A pensão acaba automaticamente quando o filho faz 18 anos?", "r": "Não. Segundo a Súmula 358 do STJ, o cancelamento da pensão do filho que atingiu a maioridade depende de decisão judicial, garantido o direito de ele se manifestar. A pensão pode continuar, por exemplo, enquanto o filho estiver estudando." },
+      { "p": "Posso me divorciar em cartório?", "r": "Sim, quando há consenso. Com a Resolução 571/2024 do CNJ, o divórcio extrajudicial passou a ser possível mesmo com filhos menores, desde que as questões relativas a eles (guarda, convivência e alimentos) já estejam resolvidas na Justiça. A presença de advogado é obrigatória." },
+      { "p": "Qual o prazo para abrir o inventário?", "r": "O Código de Processo Civil prevê a abertura em até 2 meses do falecimento (art. 611). O atraso pode gerar multa sobre o imposto de transmissão (ITCMD), conforme a lei de cada estado." }
+    ]
+  },
+  {
+    "slug": "direito-do-consumidor",
+    "titulo": "Direito do Consumidor",
+    "icone": "consumidor",
+    "resumo": "Bancos, empréstimos consignados, superendividamento, descontos e cobranças indevidas.",
+    "seoTitulo": "Advogado do Consumidor em Serra Talhada (PE) · Bancos, Consignado e Descontos Indevidos",
+    "seoDescricao": "Atuação em Direito do Consumidor e Bancário: empréstimo consignado não contratado, cartão RMC/RCC, descontos indevidos no benefício do INSS, superendividamento, negativação indevida e cobranças abusivas.",
+    "intro": [
+      "Aposentados e pensionistas estão entre as maiores vítimas de descontos não autorizados, empréstimos que nunca contrataram e cartões de crédito consignado embutidos em operações. Atuamos para cessar os descontos, recuperar os valores e buscar a reparação do dano.",
+      "Também defendemos consumidores em casos de negativação indevida, produtos e serviços com defeito, cobranças abusivas e superendividamento, com base no Código de Defesa do Consumidor e na Lei 14.181/2021."
+    ],
+    "servicos": [
+      "Empréstimo consignado não reconhecido",
+      "Cartão de crédito consignado (RMC/RCC)",
+      "Descontos indevidos de associações e seguros no benefício",
+      "Superendividamento e repactuação de dívidas",
+      "Negativação indevida (SPC/Serasa)",
+      "Cobranças abusivas e tarifas bancárias",
+      "Produtos e serviços com defeito"
+    ],
+    "quando": [
+      "Apareceu um desconto que você não reconhece no seu benefício",
+      "O banco fez um empréstimo que você não pediu",
+      "Seu nome foi negativado sem motivo",
+      "As dívidas comprometem o dinheiro do básico"
+    ],
+    "faq": [
+      { "p": "Tenho direito a receber de volta o que foi descontado?", "r": "O CDC (art. 42, parágrafo único) prevê a devolução em dobro do valor cobrado indevidamente, salvo engano justificável. Dependendo do caso, também pode haver indenização por danos morais." },
+      { "p": "Como descubro quais empréstimos estão no meu nome?", "r": "Pelo extrato de empréstimos consignados no aplicativo ou site Meu INSS, e pelo Registrato do Banco Central, que mostra empréstimos e financiamentos ligados ao seu CPF." },
+      { "p": "O que é superendividamento?", "r": "É a impossibilidade de pagar o conjunto das dívidas de consumo sem comprometer o mínimo necessário para viver. A Lei 14.181/2021 permite a repactuação dessas dívidas em um plano de pagamento." }
+    ]
+  },
+  {
+    "slug": "direito-da-saude",
+    "titulo": "Direito da Saúde",
+    "icone": "saude",
+    "resumo": "Erro médico, remédios e tratamentos pelo SUS e planos de saúde.",
+    "seoTitulo": "Advogado de Direito da Saúde em Serra Talhada (PE) · Erro Médico, SUS e Plano de Saúde",
+    "seoDescricao": "Atuação em Direito da Saúde: medicamentos e tratamentos pelo SUS, TFD, negativas de plano de saúde, cirurgias, home care e responsabilidade por erro médico e falha hospitalar.",
+    "intro": [
+      "A saúde é direito de todos e dever do Estado (Constituição Federal, art. 196). Quando o SUS, o município ou o plano de saúde negam um medicamento, um tratamento ou um transporte essencial, é possível buscar na Justiça uma ordem rápida para garantir o atendimento.",
+      "Também atuamos na responsabilização de hospitais, públicos e privados, e profissionais por erro médico e falhas na prestação do serviço, sempre com análise técnica cuidadosa do prontuário."
+    ],
+    "servicos": [
+      "Medicamentos de alto custo e tratamentos pelo SUS",
+      "Tratamento Fora do Domicílio (TFD)",
+      "Negativas de cobertura de plano de saúde",
+      "Cirurgias, exames e internações (inclusive UTI)",
+      "Erro médico e falha hospitalar",
+      "Reajustes abusivos de plano de saúde"
+    ],
+    "quando": [
+      "O SUS ou o plano negou um remédio ou tratamento",
+      "A cirurgia está parada na fila sem previsão",
+      "O município não fornece transporte para tratamento fora",
+      "Houve erro ou omissão no atendimento médico"
+    ],
+    "faq": [
+      { "p": "É possível conseguir remédio pela Justiça com urgência?", "r": "Sim. Havendo laudo médico e risco à saúde, é possível pedir tutela de urgência para que o fornecimento seja determinado logo no início do processo." },
+      { "p": "O plano de saúde pode negar um tratamento fora do rol da ANS?", "r": "Desde a Lei 14.454/2022, o rol da ANS é referência básica, e tratamentos fora dele podem ser cobertos quando preenchidos os requisitos da lei, como comprovação científica de eficácia. Cada caso deve ser analisado." },
+      { "p": "Como saber se houve erro médico?", "r": "É preciso analisar o prontuário, os exames e a conduta adotada. Nem todo resultado ruim é erro; o que se verifica é se houve falha no dever de cuidado." }
+    ]
+  },
+  {
+    "slug": "direito-penal",
+    "titulo": "Direito Penal",
+    "icone": "penal",
+    "resumo": "Defesa criminal, inquéritos, audiências de custódia e processos penais.",
+    "seoTitulo": "Advogado Criminalista em Serra Talhada (PE) · Defesa Criminal e Audiência de Custódia",
+    "seoDescricao": "Atuação em Direito Penal e Processual Penal: defesa em inquérito policial, audiência de custódia, liberdade provisória, habeas corpus, processos criminais e Tribunal do Júri.",
+    "intro": [
+      "Toda pessoa tem direito a uma defesa técnica e efetiva, e à presunção de inocência (Constituição Federal, art. 5º, LVII). Atuamos desde a fase de investigação até o julgamento e a execução da pena, com atenção às garantias constitucionais.",
+      "Também acompanhamos vítimas que desejam participar do processo como assistentes de acusação e buscar reparação."
+    ],
+    "servicos": [
+      "Acompanhamento em delegacia e inquérito policial",
+      "Audiência de custódia e liberdade provisória",
+      "Habeas corpus e revogação de prisão",
+      "Defesa em processos criminais e no Tribunal do Júri",
+      "Medidas protetivas (Lei Maria da Penha)",
+      "Execução penal e progressão de regime",
+      "Assistência à acusação"
+    ],
+    "quando": [
+      "Você ou um familiar foi intimado ou preso",
+      "Recebeu uma citação em processo criminal",
+      "Precisa de medida protetiva",
+      "Busca benefícios na execução da pena"
+    ],
+    "faq": [
+      { "p": "O que é audiência de custódia?", "r": "É a apresentação da pessoa presa a um juiz, em até 24 horas, para verificar a legalidade da prisão e a necessidade de mantê-la (CPP, art. 310). A presença da defesa é fundamental." },
+      { "p": "Sou obrigado a falar na delegacia?", "r": "Não. O direito ao silêncio é garantido pela Constituição (art. 5º, LXIII) e não pode ser interpretado contra a pessoa." },
+      { "p": "Cabe acordo no processo penal?", "r": "Em alguns casos, sim, como a transação penal, a suspensão condicional do processo e o acordo de não persecução penal (CPP, art. 28-A), conforme os requisitos legais." }
+    ]
+  },
+  {
+    "slug": "direito-administrativo",
+    "titulo": "Direito Administrativo",
+    "icone": "administrativo",
+    "resumo": "Servidores públicos, concursos e ações contra municípios e o Estado.",
+    "seoTitulo": "Advogado de Servidor Público em Serra Talhada (PE) · Concursos e Ações contra o Município",
+    "seoDescricao": "Atuação em Direito Administrativo: direitos de servidores públicos, diferenças salariais, piso, adicionais, concursos públicos, licitações, alvarás e ações contra municípios e o Estado de Pernambuco.",
+    "intro": [
+      "Servidores municipais e estaduais frequentemente deixam de receber piso, adicionais, progressões e outras vantagens previstas em lei. Atuamos para cobrar essas diferenças e garantir o cumprimento das decisões, inclusive por meio de RPV e precatórios.",
+      "Também defendemos cidadãos e empresas diante de atos ilegais da Administração, como negativas indevidas de licenças e alvarás, e candidatos em concursos públicos."
+    ],
+    "servicos": [
+      "Diferenças salariais, piso e adicionais de servidores",
+      "Progressões, licenças e aposentadoria do servidor",
+      "Concursos públicos (nomeação, eliminação indevida)",
+      "Processos administrativos disciplinares",
+      "Alvarás e licenças negados pela Prefeitura",
+      "Execução contra a Fazenda Pública (RPV e precatórios)"
+    ],
+    "quando": [
+      "O município não paga o que a lei garante ao servidor",
+      "Você foi eliminado ou preterido em concurso",
+      "Responde a processo administrativo",
+      "A Prefeitura negou uma licença ou alvará"
+    ],
+    "faq": [
+      { "p": "Qual o prazo para cobrar diferenças do município?", "r": "Em regra, 5 anos (Decreto 20.910/1932). Em parcelas mensais, prescrevem apenas as anteriores aos 5 anos do ajuizamento da ação." },
+      { "p": "O que são RPV e precatório?", "r": "São as formas de pagamento das condenações contra o Poder Público. A RPV é para valores menores, com pagamento mais rápido; o precatório, para valores maiores, entra em uma fila anual." },
+      { "p": "Aprovado dentro das vagas tem direito à nomeação?", "r": "Sim. O STF reconheceu o direito subjetivo à nomeação do candidato aprovado dentro do número de vagas do edital (Tema 161), salvo situações excepcionais." }
+    ]
+  },
+  {
+    "slug": "direito-constitucional",
+    "titulo": "Direito Constitucional",
+    "icone": "constitucional",
+    "resumo": "Mandados de segurança e defesa de direitos fundamentais.",
+    "seoTitulo": "Advogado Constitucional em Serra Talhada (PE) · Mandado de Segurança e Direitos Fundamentais",
+    "seoDescricao": "Atuação em Direito Constitucional: mandado de segurança, habeas data, mandado de injunção e defesa de direitos fundamentais diante de atos ilegais do Poder Público.",
+    "intro": [
+      "Quando uma autoridade pública viola um direito líquido e certo, o mandado de segurança é o instrumento constitucional para corrigir a ilegalidade de forma rápida (CF, art. 5º, LXIX, e Lei 12.016/2009).",
+      "Atuamos na defesa de direitos fundamentais como saúde, educação, acesso à informação e devido processo legal, sempre com base na Constituição Federal e na jurisprudência do STF."
+    ],
+    "servicos": [
+      "Mandado de segurança individual",
+      "Habeas data (acesso a informações pessoais)",
+      "Mandado de injunção",
+      "Defesa de direitos fundamentais",
+      "Ações contra atos ilegais de autoridades"
+    ],
+    "quando": [
+      "Uma autoridade pública praticou ato ilegal contra você",
+      "Seu direito é claro e comprovado por documentos",
+      "Um órgão público nega acesso às suas informações"
+    ],
+    "faq": [
+      { "p": "Qual o prazo do mandado de segurança?", "r": "120 dias, contados da ciência do ato ilegal (Lei 12.016/2009, art. 23)." },
+      { "p": "O que é direito líquido e certo?", "r": "É o direito comprovado de plano, por documentos, sem necessidade de produção de outras provas, como testemunhas ou perícia." },
+      { "p": "Cabe pedido de liminar?", "r": "Sim. Havendo fundamento relevante e risco de ineficácia da medida, o juiz pode suspender o ato ilegal desde logo (art. 7º, III)." }
+    ]
+  }
+]

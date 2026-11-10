@@ -1,0 +1,80 @@
+{
+  "nome": "Els Cordeiro & Juan Vasconcelos Advogados",
+  "nomeCurto": "Els Cordeiro & Juan Vasconcelos",
+  "url": "https://www.elscordeirovasconcelos.adv.br",
+  "descricao": "Escritório de advocacia em Serra Talhada/PE, com unidade em Tabira/PE e atendimento em todo o Brasil. Direito Previdenciário, Trabalhista, Civil, Família, Consumidor, Saúde, Penal, Administrativo e Constitucional.",
+  "cnpj": "56.221.574/0001-44",
+  "advogados": [
+    {
+      "nome": "Dra. Els Cordeiro",
+      "nomeCompleto": "Els Cordeiro Bernardino",
+      "oab": "",
+      "instagram": "elscordeiro.adv",
+      "funcao": "Advogada",
+      "iniciais": "EC",
+      "cargo": "Advogada · Sócia",
+      "foto": "",
+      "bio": "Atuação em Direito Previdenciário, Família, Consumidor e Civil, com atendimento humanizado e foco na solução das demandas das famílias do Sertão."
+    },
+    {
+      "nome": "Dr. Juan Vasconcelos",
+      "nomeCompleto": "Juan Emanuel de Moura Vasconcelos",
+      "oab": "OAB/PE 71.970",
+      "instagram": "dr.juanvasconcelos",
+      "funcao": "Advogado",
+      "iniciais": "JV",
+      "cargo": "Advogado · Sócio",
+      "foto": "",
+      "bio": "Atuação em Direito Previdenciário e Cível, Trabalhista, Saúde, Administrativo e Penal, com produção de conteúdo jurídico informativo para a população."
+    }
+  ],
+  "telefone": "(87) 3831-7625",
+  "telefoneLink": "+558738317625",
+  "whatsapp": "(87) 9 9620-2591",
+  "whatsappLink": "5587996202591",
+  "whatsappMensagem": "Olá! Vim pelo site e gostaria de falar com o escritório.",
+  "email": "elscordeiroadv19@gmail.com",
+  "instagram": "dr.juanvasconcelos",
+  "instagramEls": "elscordeiro.adv",
+  "facebook": "https://www.facebook.com/profile.php?id=61580796867002",
+  "horario": "Segunda a sexta, das 8h às 17h",
+  "unidades": [
+    {
+      "nome": "Sede · Serra Talhada",
+      "rua": "Rua Irnério Inácio, nº 63",
+      "bairro": "Nossa Senhora da Penha",
+      "cidade": "Serra Talhada",
+      "uf": "PE",
+      "cep": "56903-450",
+      "lat": -7.9858,
+      "lng": -38.2969,
+      "mapa": "Rua Irnério Inácio, 63, Nossa Senhora da Penha, Serra Talhada, PE, 56903-450"
+    },
+    {
+      "nome": "Unidade · Tabira",
+      "rua": "Avenida Raul Pereira Amorim, nº 84",
+      "bairro": "",
+      "cidade": "Tabira",
+      "uf": "PE",
+      "cep": "56780-000",
+      "lat": -7.5906,
+      "lng": -37.5394,
+      "mapa": "Avenida Raul Pereira Amorim, 84, Tabira, PE"
+    }
+  ],
+  "regiao": [
+    "Serra Talhada",
+    "Tabira",
+    "Afogados da Ingazeira",
+    "São José do Egito",
+    "Triunfo",
+    "Santa Cruz da Baixa Verde",
+    "Calumbi",
+    "Flores",
+    "Carnaíba",
+    "Floresta",
+    "São José do Belmonte",
+    "Mirandiba",
+    "Sertão do Pajeú"
+  ]
+}
