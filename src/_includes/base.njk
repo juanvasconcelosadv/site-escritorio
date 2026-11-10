@@ -1,7 +1,7 @@
 {%- from "icones.njk" import icone -%}
 {%- if seoTitulo -%}{%- set tituloPagina = seoTitulo -%}
-{%- elif title -%}{%- set tituloPagina = title + " | " + site.nomeCurto + " Advogados" -%}
-{%- else -%}{%- set tituloPagina = site.nome + " · Advocacia em Serra Talhada e Tabira (PE)" -%}{%- endif -%}
+{%- elif title -%}{%- set tituloPagina = title + " | Cordeiro & Vasconcelos" -%}
+{%- else -%}{%- set tituloPagina = "Advogados em Serra Talhada e Tabira (PE) | Cordeiro & Vasconcelos" -%}{%- endif -%}
 {%- set descPagina = description or site.descricao -%}
 {%- set imgPagina = (imagem or "/assets/img/og-padrao.png") | absUrl -%}
 <!doctype html>
@@ -12,7 +12,8 @@
 <title>{{ tituloPagina }}</title>
 <meta name="description" content="{{ descPagina }}">
 <link rel="canonical" href="{{ page.url | absUrl }}">
-<meta name="robots" content="index, follow, max-image-preview:large">
+{% if site.googleVerificacao %}<meta name="google-site-verification" content="{{ site.googleVerificacao }}">
+{% endif %}<meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0b1f3a">
 <meta name="geo.region" content="BR-PE">
 <meta name="geo.placename" content="Serra Talhada">
