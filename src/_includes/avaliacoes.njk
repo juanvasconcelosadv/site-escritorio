@@ -1,0 +1,180 @@
+<!-- ===== AVALIAÇÕES DO GOOGLE · Cordeiro & Vasconcelos =====
+     Incluído no src/index.njk logo ANTES da seção "Onde estamos".
+     Bloco autônomo: HTML + CSS + JS (prefixo av- para não conflitar). -->
+<section class="av" id="avaliacoes" aria-labelledby="av-titulo">
+  <div class="wrap">
+    <div class="av-topo">
+      <div>
+        <span class="av-pre">Avaliações no Google</span>
+        <h2 id="av-titulo">O que nossos clientes dizem</h2>
+        <p>Opiniões públicas deixadas por clientes no nosso Perfil da Empresa no Google.</p>
+      </div>
+      <a class="av-nota" href="https://www.google.com/maps/place/?q=place_id:ChIJMaq87z4WpwcRqdRPpCoggvk" target="_blank" rel="noopener" aria-label="Nota 4,9 de 5 com 122 avaliações no Google. Ver todas">
+        <strong>4,9</strong>
+        <span class="av-nota-dir">
+          <span class="av-estrelas" aria-hidden="true">★★★★★</span>
+          <span>122 avaliações no Google</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="av-carrossel" aria-roledescription="carrossel" aria-label="Avaliações de clientes">
+      <button class="av-seta av-ant" type="button" aria-label="Avaliação anterior">&#8249;</button>
+      <div class="av-janela">
+        <ul class="av-trilho" id="av-trilho"></ul>
+      </div>
+      <button class="av-seta av-prox" type="button" aria-label="Próxima avaliação">&#8250;</button>
+    </div>
+
+    <div class="av-cta">
+      <div class="av-cta-txt">
+        <span class="av-cta-estrelas" aria-hidden="true">★★★★★</span>
+        <h3>Já foi atendido pelo escritório?</h3>
+        <p>Sua opinião ajuda outras pessoas do Sertão a encontrar orientação jurídica de confiança. Leva menos de um minuto.</p>
+      </div>
+      <div class="av-cta-botoes">
+        <a class="av-btn av-btn-ouro" href="https://search.google.com/local/writereview?placeid=ChIJMaq87z4WpwcRqdRPpCoggvk" target="_blank" rel="noopener">Avaliar no Google</a>
+        <a class="av-btn av-btn-linha" href="https://www.google.com/maps/place/?q=place_id:ChIJMaq87z4WpwcRqdRPpCoggvk" target="_blank" rel="noopener">Ver todas as avaliações</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.av{position:relative;padding:clamp(64px,9vw,110px) 0;background:
+  radial-gradient(1200px 500px at 85% -10%,rgba(201,162,74,.18),transparent 60%),
+  radial-gradient(900px 500px at -10% 110%,rgba(29,66,117,.55),transparent 60%),
+  linear-gradient(160deg,#0b1f3a 0%,#0e2546 55%,#0b1f3a 100%);color:#e9edf5;overflow:hidden}
+.av h2{color:#fff;margin:.35em 0 .3em}
+.av-topo{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.av-topo p{color:#b9c3d6;margin:0;max-width:520px}
+.av-pre{display:inline-block;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:#e2c47a;font-weight:600}
+.av-nota{display:flex;align-items:center;gap:14px;padding:14px 22px;border-radius:16px;text-decoration:none;color:#e9edf5;
+  background:rgba(255,255,255,.06);border:1px solid rgba(226,196,122,.35);backdrop-filter:blur(6px);transition:.25s}
+.av-nota:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.av-nota strong{font-family:"Playfair Display",Georgia,serif;font-size:2.6rem;line-height:1;color:#fff}
+.av-nota-dir{display:flex;flex-direction:column;font-size:.85rem;color:#b9c3d6}
+.av-estrelas,.av-cta-estrelas,.av-card-estrelas{color:#e2c47a;letter-spacing:2px}
+.av-estrelas{font-size:1.15rem}
+
+.av-carrossel{position:relative}
+.av-janela{overflow:hidden;margin:-12px;padding:12px}
+.av-trilho{--g:20px;list-style:none;margin:0;padding:0;display:flex;gap:var(--g);transition:transform .8s cubic-bezier(.65,0,.25,1);will-change:transform}
+.av-card{flex:0 0 calc((100% - 3*var(--g))/4);min-width:0;display:flex;flex-direction:column;gap:14px;padding:26px 24px 22px;border-radius:18px;
+  background:#fff;color:#1c2433;box-shadow:0 18px 40px rgba(0,0,0,.25);position:relative;transition:transform .3s,box-shadow .3s}
+.av-card:hover{transform:translateY(-4px);box-shadow:0 26px 50px rgba(0,0,0,.32)}
+.av-card::before{content:"\201C";position:absolute;top:6px;right:18px;font-family:"Playfair Display",Georgia,serif;font-size:4.5rem;line-height:1;color:rgba(201,162,74,.22)}
+.av-card-estrelas{font-size:1rem}
+.av-card-txt{margin:0;font-size:.95rem;line-height:1.6;color:#36405a;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden;flex:1}
+.av-autor{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid #eee6d6}
+.av-avatar{flex:0 0 42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;font-size:1rem;
+  background:linear-gradient(135deg,#c9a24a,#a07d2c)}
+.av-card:nth-child(3n+2) .av-avatar{background:linear-gradient(135deg,#1d4275,#0b1f3a)}
+.av-card:nth-child(3n+3) .av-avatar{background:linear-gradient(135deg,#5b6578,#36405a)}
+.av-nome{font-weight:600;color:#0b1f3a;font-size:.95rem;line-height:1.2}
+.av-fonte{font-size:.78rem;color:#7a8396}
+
+.av-seta{position:absolute;top:50%;z-index:2;width:46px;height:46px;border-radius:50%;border:1px solid rgba(226,196,122,.5);
+  background:rgba(11,31,58,.85);color:#e2c47a;font-size:1.8rem;line-height:1;cursor:pointer;display:grid;place-items:center;transform:translateY(-50%);transition:.2s}
+.av-seta:hover{background:#c9a24a;color:#0b1f3a}
+.av-ant{left:-22px}.av-prox{right:-22px}
+
+.av-cta{margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;padding:32px clamp(22px,4vw,44px);
+  border-radius:22px;background:linear-gradient(120deg,rgba(201,162,74,.16),rgba(255,255,255,.04));border:1px solid rgba(226,196,122,.35)}
+.av-cta h3{color:#fff;margin:.3em 0 .25em;font-size:1.45rem}
+.av-cta p{margin:0;color:#b9c3d6;max-width:560px}
+.av-cta-estrelas{font-size:1.3rem}
+.av-cta-botoes{display:flex;gap:12px;flex-wrap:wrap}
+.av-btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;transition:.25s;white-space:nowrap}
+.av-btn-ouro{background:linear-gradient(135deg,#e2c47a,#c9a24a);color:#0b1f3a;box-shadow:0 10px 26px rgba(201,162,74,.35)}
+.av-btn-ouro:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(201,162,74,.5)}
+.av-btn-linha{border:1px solid rgba(255,255,255,.35);color:#fff}
+.av-btn-linha:hover{border-color:#e2c47a;color:#e2c47a}
+
+@media (max-width:1024px){.av-card{flex-basis:calc((100% - var(--g))/2)}}
+@media (max-width:640px){
+  .av-card{flex-basis:100%}
+  .av-seta{display:none}
+  .av-nota{width:100%}
+  .av-btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){.av-trilho{transition:none}}
+</style>
+
+<script>
+(function(){
+  // Avaliações reais do Perfil da Empresa no Google (texto original dos clientes).
+  var AV = [
+    ["Andreia","Atendimento excelente, me senti realmente acolhida. Já sai de la cm tods a explicação e tudo marcado do meu beneficio. Recomendo!"],
+    ["Maria Lucilda","O Els Cordeiro Advogados se destaca pela excelência no atendimento, profissionalismo e compromisso com cada cliente. A advogada responsável demonstra grande proatividade, conhecimento técnico e dedicação em todas as demandas, transmitindo segurança e confiança desde o primeiro contato."],
+    ["Hittuyara Quidute","Ótimo escritório, equipe atenciosa, organizada e preparada para esclarecer todas as dúvidas. Ambiente acolhedor e profissionalismo em cada detalhe. Recomendo com confiança."],
+    ["Klenya Mourato","Excelente advogada!!! Humana, empática, honesta, cumpre prazos, age com serenidade e simpatia. Estuda constantemente, conhece jurisprudências, leis novas e entendimentos recentes, analisa seu caso com atenção e dedicação."],
+    ["Maria Janaina","Ótima, atendentes muito educados e eficientes. Escritório acolhedor"],
+    ["Maria Eduarda Almeida Soares","Desde o primeiro contato com o escritório, você se senti acolhido e ouvido de verdade. A equipe é extremamente atenciosa e profissional, e explicam com clareza cada etapa do processo para o benefício do INSS."],
+    ["Alisson Barbosa","Escritório excelente, atendimento maravilhoso, minha demanda foi solucionada. Recomendo demais."],
+    ["Luiz Apolinário","Ia passando na rua e entrei. Só fui tomar um cafezinho e virei cliente. Atendimento ótimo"],
+    ["Vitoria Edven","Experiência única e acima de tudo muito profissional, tanto no atendimento quanto na resolução do meu problemas, profissionais altamente qualificados, super índico."],
+    ["Alice Rodrigues","Atendimento nota 10! Todas as vezes que precisei fui muito bem atendida. Só tenho a agradecer!"],
+    ["Markdalva Pires","Atendimento de excelência, a Dra. Els e sua equipe são muito empáticos, e resolvem tudo!!! Amei o atendimento!!"],
+    ["Jadson Emanoel","Um excelente escritório, profissionais de alto padrão, com experiência e ótima formação! Recomendo demais!!!"],
+    ["Maria Nunes","Atendimento excelente, me senti super acolhida. Recomendo demais"],
+    ["Amanda Moraes","Responsabilidade, agilidade e eficiência é com eles! Indico de olhos fechados"],
+    ["MariaJose Ferreira Nascimento","Ótima advogada! Muito profissional, educada e comprometida com o cliente."],
+    ["Luanda Lima","Recomendo demais, ótimo atendimento. Toda minha demanda foi resolvida com excelência."]
+  ];
+  var INTERVALO = 4500;
+
+  var trilho = document.getElementById('av-trilho');
+  if(!trilho) return;
+  function esc(s){ return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function card(r){
+    return '<li class="av-card"><span class="av-card-estrelas" aria-label="5 de 5 estrelas">★★★★★</span>'+
+      '<p class="av-card-txt">'+esc(r[1])+'</p>'+
+      '<div class="av-autor"><span class="av-avatar" aria-hidden="true">'+esc(r[0].charAt(0).toUpperCase())+'</span>'+
+      '<div><div class="av-nome">'+esc(r[0])+'</div><div class="av-fonte">Avaliação no Google</div></div></div></li>';
+  }
+  // originais + cópias das 4 primeiras para o loop infinito
+  trilho.innerHTML = AV.map(card).join('') + AV.slice(0,4).map(card).join('');
+  var clones = [].slice.call(trilho.children, AV.length);
+  clones.forEach(function(c){ c.setAttribute('aria-hidden','true'); });
+
+  var i = 0, timer = null, reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function passo(){ var c = trilho.children[0]; return c.getBoundingClientRect().width + parseFloat(getComputedStyle(trilho).columnGap || 20); }
+  function ir(n, anim){
+    trilho.style.transition = anim === false ? 'none' : '';
+    i = n;
+    trilho.style.transform = 'translateX(' + (-i * passo()) + 'px)';
+  }
+  trilho.addEventListener('transitionend', function(){
+    if(i >= AV.length){ ir(0,false); }
+  });
+  function prox(){ if(i >= AV.length){ ir(0,false); trilho.offsetWidth; } ir(i+1); }
+  function ant(){ if(i <= 0){ ir(AV.length,false); trilho.offsetWidth; } ir(i-1); }
+  function play(){ if(reduz) return; stop(); timer = setInterval(prox, INTERVALO); }
+  function stop(){ clearInterval(timer); }
+
+  var raiz = trilho.closest('.av-carrossel');
+  raiz.querySelector('.av-prox').addEventListener('click', function(){ prox(); play(); });
+  raiz.querySelector('.av-ant').addEventListener('click', function(){ ant(); play(); });
+  raiz.addEventListener('mouseenter', stop);
+  raiz.addEventListener('mouseleave', play);
+  raiz.addEventListener('focusin', stop);
+  raiz.addEventListener('focusout', play);
+  document.addEventListener('visibilitychange', function(){ document.hidden ? stop() : play(); });
+
+  // arrastar com o dedo no celular
+  var x0 = null;
+  raiz.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; stop(); }, {passive:true});
+  raiz.addEventListener('touchend', function(e){
+    if(x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if(Math.abs(dx) > 40){ dx < 0 ? prox() : ant(); }
+    play();
+  });
+
+  addEventListener('resize', function(){ ir(i,false); });
+  ir(0,false);
+  play();
+})();
+</script>
+<!-- ===== FIM AVALIAÇÕES DO GOOGLE ===== -->
