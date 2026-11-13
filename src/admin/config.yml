@@ -36,7 +36,7 @@ collections:
       - label: "Área (categoria)"
         name: categoria
         widget: select
-        options: ["Direito Previdenciário","Direito Trabalhista","Direito Civil","Direito de Família","Direito do Consumidor","Direito da Saúde","Direito Penal","Direito Administrativo","Direito Constitucional"]
+        options: ["Direito Previdenciário","Direito Trabalhista","Direito Civil","Direito de Família","Direito do Consumidor","Direito da Saúde","Direito Penal","Direito Administrativo","Direito Constitucional","Direito Tributário"]
       - { label: "Autor", name: autor, widget: select, options: ["Dr. Juan Vasconcelos","Dra. Els Cordeiro"], default: "Dr. Juan Vasconcelos" }
       - { label: "Imagem de capa (opcional)", name: imagem, widget: image, required: false }
       - { label: "Descrição da imagem", name: imagemAlt, widget: string, required: false }
