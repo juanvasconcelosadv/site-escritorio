@@ -48,7 +48,7 @@
       "email": "{{ site.email }}",
       "priceRange": "Consulte",
       "address": { "@type": "PostalAddress", "streetAddress": "{{ site.unidades[0].rua }}", "addressLocality": "{{ site.unidades[0].cidade }}", "addressRegion": "{{ site.unidades[0].uf }}", "postalCode": "{{ site.unidades[0].cep }}", "addressCountry": "BR" },
-      "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" }],
+      "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "16:00" }],
       "areaServed": [{% for c in site.regiao %}{ "@type": "City", "name": "{{ c }}" },{% endfor %} { "@type": "Country", "name": "Brasil" }],
       "knowsAbout": [{% for a in areas %}"{{ a.titulo }}"{% if not loop.last %}, {% endif %}{% endfor %}],
       "sameAs": ["https://www.instagram.com/{{ site.instagram }}/", "https://www.instagram.com/{{ site.instagramEls }}/", "{{ site.facebook }}"],
